@@ -32,6 +32,23 @@ def gcd(x, y):
             return gcd(x, y>>1);
         else:
             return gcd(y,x-y);
+        
+def dictPrime(num):
+    i,ret = 2,{}
+    if isPrime(num) : return {num:1}
+    while num > 1:
+        if isPrime(i):
+            while num % i == 0:
+                num /= i
+                if ret.has_key(i):
+                    ret[i] +=1
+                else:
+                    ret[i] = 1
+            if isPrime(num):
+                ret[num] = 1
+                return ret
+        i += 1
+    return ret
 
 if __name__ == '__main__':
     print set([3,3,2,4])
