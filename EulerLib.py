@@ -19,6 +19,20 @@ def factorial(x):
     if x == 0 : return 1
     return reduce(lambda x,y:x*y, range(1,x+1)) 
 
+def gcd(x, y):
+    if x<y : return gcd(y,x);
+    if y==0 : return x;
+    if x%2==0:
+        if y%2==0:
+            return gcd(x>>1, y>>1)<<1;
+        else:
+            return gcd(x>>1, y);
+    else:
+        if y%2==0:
+            return gcd(x, y>>1);
+        else:
+            return gcd(y,x-y);
+
 if __name__ == '__main__':
     print set([3,3,2,4])
     pass
