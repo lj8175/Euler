@@ -6,7 +6,7 @@ Created on 2013-12-12
 
 from EulerLib import isPrime
 
-def numPrimeWays(n, l):
+def listPrimeWays(n, l):
     tl = [1]+[0]*n
     for i in l:
         for j in range(i,n+1):
@@ -20,7 +20,7 @@ if __name__ == '__main__':
         if isPrime(i):
             l.append(i)
 
-    li = numPrimeWays(known,l)
+    li = listPrimeWays(known,l)
     for i in range(known):
         if li[i]>known:
             print i#,li[i]
