@@ -32,5 +32,5 @@ def numWays3(n):
 
 if __name__ == '__main__':
     known = 100
-    print numWays3(100)
+    print numWays3(known)
     pass
