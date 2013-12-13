@@ -15,6 +15,9 @@ def isPrime(x):
             return False
     return True
 
+def isSquare(x):
+    return int(math.sqrt(x))**2 == x
+
 def factorial(x):
     if x == 0 : return 1
     return reduce(lambda x,y:x*y, range(1,x+1)) 
